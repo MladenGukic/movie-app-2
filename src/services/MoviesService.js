@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL =  axios.defaults.baseURL = 'http://localhost:8000/api/'
+const BASE_URL =  axios.defaults.baseURL = 'http://localhost:3000/api/'
 
  class MovieService {
     constructor() {
@@ -17,6 +17,10 @@ const BASE_URL =  axios.defaults.baseURL = 'http://localhost:8000/api/'
             axios.defaults.headers.common,
             headers
         )
+    }
+
+    getAll() {
+        return axios.get('/movies')
     }
  }
 
