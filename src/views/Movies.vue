@@ -13,7 +13,7 @@ import  store  from './../store'
 export default {
   computed: {
     movies() {
-      return store.state.movies
+      return store.getters.filteredMovies
     }
   },
   beforeRouteEnter(to,from,next) {
